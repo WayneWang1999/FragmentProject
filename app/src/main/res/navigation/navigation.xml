@@ -6,7 +6,7 @@
     app:startDestination="@id/inputNameFragment">
     <fragment
         android:id="@+id/welcomeBack"
-        android:name="com.example.myapplication.WelcomeBackFragment"
+        android:name="com.example.myapplication.fragment.WelcomeBackFragment"
         android:label="fragment_welcome_back"
         tools:layout="@layout/fragment_welcome_back" >
         <argument
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/lessonList"
-        android:name="com.example.myapplication.LessonListFragment"
+        android:name="com.example.myapplication.fragment.LessonListFragment"
         android:label="fragment_lesson_list"
         tools:layout="@layout/fragment_lesson_list" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/lessonDetail"
-        android:name="com.example.myapplication.LessonDetailFragment"
+        android:name="com.example.myapplication.fragment.LessonDetailFragment"
         android:label="fragment_lesson_detail"
         tools:layout="@layout/fragment_lesson_detail">
         <argument
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/inputNameFragment"
-        android:name="com.example.myapplication.InputNameFragment"
+        android:name="com.example.myapplication.fragment.InputNameFragment"
         android:label="fragment_input_name"
         tools:layout="@layout/fragment_input_name" >
         <action
