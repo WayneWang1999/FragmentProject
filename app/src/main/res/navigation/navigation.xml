@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/inputNameFragment">
+    <fragment
+        android:id="@+id/welcomeBack"
+        android:name="com.example.myapplication.WelcomeBackFragment"
+        android:label="fragment_welcome_back"
+        tools:layout="@layout/fragment_welcome_back" >
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeBack_to_lessonList"
+            app:destination="@id/lessonList" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonList"
+        android:name="com.example.myapplication.LessonListFragment"
+        android:label="fragment_lesson_list"
+        tools:layout="@layout/fragment_lesson_list" >
+        <action
+            android:id="@+id/action_lessonList_to_lessonDetail"
+            app:destination="@id/lessonDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonDetail"
+        android:name="com.example.myapplication.LessonDetailFragment"
+        android:label="fragment_lesson_detail"
+        tools:layout="@layout/fragment_lesson_detail">
+        <argument
+            android:name="lessonName"
+            app:argType="string"
+            android:defaultValue="Default Lesson Name"/>
+        <argument
+            android:name="classIndex"
+            app:argType="integer"/>
+        <argument
+            android:name="lessonUrl"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/inputNameFragment"
+        android:name="com.example.myapplication.InputNameFragment"
+        android:label="fragment_input_name"
+        tools:layout="@layout/fragment_input_name" >
+        <action
+            android:id="@+id/action_inputNameFragment_to_welcomeBack"
+            app:destination="@id/welcomeBack" />
+    </fragment>
+</navigation>
